@@ -6,7 +6,13 @@ class Solution:
         total = 0
 
         for i in range(len(timeSeries) - 1):
-            total += min(duration, timeSeries[i + 1] - timeSeries[i])
+            start = timeSeries[i]
+            end = timeSeries[i] + duration
+
+            if end <= timeSeries[i + 1]:
+                total += duration
+            else:
+                total += timeSeries[i + 1] - start
 
         total += duration
 
