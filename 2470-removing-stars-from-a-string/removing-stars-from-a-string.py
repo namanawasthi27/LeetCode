@@ -6,4 +6,4 @@ class Solution:
                 sta.pop()
             else:
                 sta.append(s[i])
-        return str("".join(sta))
+        return "".join(sta)
