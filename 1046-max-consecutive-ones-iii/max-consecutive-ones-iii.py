@@ -1,8 +1,8 @@
 class Solution:
     def longestOnes(self, nums: list[int], k: int) -> int:
         ans=0
-        left=0
         zeros=0
+        left=0
         for right in range(len(nums)):
             if nums[right]==0:
                 zeros+=1
